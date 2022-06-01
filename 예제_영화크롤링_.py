@@ -16,7 +16,7 @@ def crawl(url):
         title = movie.find('dt', class_ = 'tit').find('a').text
         genre = movie.find('span', class_ = 'link_txt').find('a').text
         ddList = movie.find_all('dd')
-        cast = re.sub(r'[\r\n\t]','',str(ddList[5].text))
+        cast = re.sub(r'[\r\n\t]','',str(ddList[5].text)) 
         rank = rank + 1        
 
         result.append([rank, title, genre, cast])
